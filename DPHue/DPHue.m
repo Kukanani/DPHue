@@ -49,7 +49,7 @@
 }
 
 - (void)registerUsername {
-    DPHue __weak *weakSelf = self;
+    DPHue *weakSelf = self;
     
     NSDictionary *dict = @{@"devicetype": self.deviceType};
     NSString *urlString = [NSString stringWithFormat:@"http://%@/api/", self.host];
