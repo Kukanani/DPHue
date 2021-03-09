@@ -95,7 +95,6 @@
     connection.completionBlock = ^(NSData *data, NSError *err) {
         NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         [self.log appendString:msg];
-        [self.log appendString:@"wut"];
         // If this string is found, then url == hue!
         if ([msg rangeOfString:@"Philips hue"].location != NSNotFound) {
             [self.log appendFormat:@"%@: Found hue at %@!\n", [NSDate date], url.host];
